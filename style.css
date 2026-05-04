@@ -456,18 +456,14 @@ section { padding: var(--s12) 0; }
   flex-direction: column;
   gap: var(--s2);
   transition: transform .3s, border-color .3s, box-shadow .3s;
-  opacity: 0;
-  transform: translateY(24px);
-}
-.project-card.visible {
+  /* No opacity or transform animations on load */
   opacity: 1;
-  transform: translateY(0);
-  transition: opacity .5s ease, transform .5s ease, border-color .3s, box-shadow .3s;
+  transform: none;
 }
 .project-card:hover {
   border-color: rgba(56,189,248,.35);
   box-shadow: 0 8px 32px rgba(0,0,0,.4), 0 0 0 1px rgba(56,189,248,.1);
-  transform: translateY(-4px) !important;
+  transform: translateY(-4px);
 }
 
 .project-featured {
@@ -700,4 +696,4 @@ footer {
 
   .hero-cta { flex-direction: column; }
   .btn { text-align: center; }
-}
+} 
